@@ -75,6 +75,14 @@ public class Pokemon {
      * A 20 sided dice used to calculate the attack and defense bonuses during an attack.
      */
     public Dice d20;
+    /**
+     * Check to see life.
+     */
+    public boolean isDead;
+    /**
+     * Check to see Type
+     */
+    public boolean isFire;
 
     /**
      * Create a new Pokemon with default values.
@@ -203,6 +211,7 @@ public class Pokemon {
                 System.out.println(opponent.name + " has "
                         + (opponent.hitPoints - totalDamage) + " hit points");
             } else {
+                isDead = true; // NEW ADD
                 System.out.println(opponent.name + " has been defeated!");
             }
             /*
